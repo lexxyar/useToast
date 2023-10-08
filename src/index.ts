@@ -2,6 +2,7 @@ import {reactive, UnwrapNestedRefs, UnwrapRef} from "vue";
 import IUseToast from "./lib/IUseToast";
 import ToastStruct from "./lib/ToastStruct";
 import IToastStructParams from "./lib/IToastStructParams";
+import {TMessageType} from "./lib/typedef";
 
 const refFlash: UnwrapNestedRefs<IUseToast> = reactive({
     items: [] as ToastStruct[],
@@ -35,3 +36,4 @@ const refFlash: UnwrapNestedRefs<IUseToast> = reactive({
 })
 
 export const useToast = () => refFlash
+export {IUseToast, ToastStruct, IToastStructParams, TMessageType}
