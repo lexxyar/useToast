@@ -1,0 +1,36 @@
+{
+  "name": "@lexxsoft/usetoast",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc -w",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version release",
+    "test": "npm run build && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexxyar/useToast.git"
+  },
+  "keywords": [
+    "vue",
+    "toast",
+    "toastify",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Aleksey Komov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexxyar/useToast/issues"
+  },
+  "homepage": "https://github.com/lexxyar/useToast#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vue": "^3.2.36"
+  }
+}
