@@ -4,6 +4,7 @@ import ToastStruct from "./lib/ToastStruct";
 import IToastStructParams from "./lib/IToastStructParams";
 import {TMessageType} from "./lib/typedef";
 import {Toast} from "@lexxsoft/upui";
+import '@lexxsoft/upui/dist/style.css'
 
 const refFlash: UnwrapNestedRefs<IUseToast> = reactive({
     items: [] as ToastStruct[],
