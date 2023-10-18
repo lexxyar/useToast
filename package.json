@@ -10,7 +10,8 @@
     "patch": "npm version patch",
     "minor": "npm version minor",
     "major": "npm version release",
-    "test": "npm run build && mocha"
+    "test": "npm run build && mocha",
+    "upd": "npm i @lexxsoft/upui@latest"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,6 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
-    "@lexxsoft/upui": "^1.3.6"
+    "@lexxsoft/upui": "^1.3.7"
   }
 }

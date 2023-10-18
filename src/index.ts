@@ -21,7 +21,11 @@ const refFlash: UnwrapNestedRefs<IUseToast> = reactive({
         }
 
         const tmpContainer: HTMLDivElement = document.createElement('div')
-        const res: VNode<any> = h(Toast, {message: toast.message, styl: toast.type})
+        const res: VNode<any> = h(Toast, {
+            message: toast.message, styl: toast.type, onRemove: () => {
+                refFlash.dismiss(tst.id)
+            }
+        })
         render(res, tmpContainer)
         const item: HTMLElement = tmpContainer.children.item(0) as HTMLElement
         item.setAttribute('id', tst.id)
@@ -50,6 +54,10 @@ const refFlash: UnwrapNestedRefs<IUseToast> = reactive({
         const index: number = refFlash.items.findIndex((e: UnwrapRef<ToastStruct>): boolean => e.id === id)
         if (index >= 0) {
             refFlash.items.splice(index, 1)
+            const el = document.getElementById(id)
+            if (el) {
+                el.remove()
+            }
         }
     },
     dismiss: (id: string): void => {
